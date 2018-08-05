@@ -34,9 +34,6 @@ class ImageMaker {
         
         // TODO: Append `this.bottomText` as a child element to `this.imagePreview`
         this.imagePreview = appendChild('this.bottomText')
-        
-        // This class also needs to use the form fields to read user input. Set
-        // those up for future use, too.
 
         // TODO: Select the `input` element with the `name` attribute "backgroundImage"
         this.backgroundInput = document.querySelector('select[name="backgroundImage"]');
@@ -47,9 +44,6 @@ class ImageMaker {
         // TODO: Select the `input` element with the `name` attribute "bottomText"
         this.bottomTextInput = document.querySelector('input[name="bottomText"') ;
 
-        // NOTE: If you add additional form fields to modify other aspects of
-        // the image, then you will need to make attributes for each of those
-        // elements here.
     }
     drawPreview(){
         // This function is called whenever a user changes one of the form fields
@@ -59,11 +53,13 @@ class ImageMaker {
         // update `this.imagePreview`.
 
         // TODO: Update the `background-image` CSS property for `this.imagePreview`.
+        this.imagePreview.style.background-image = 'url(images/${this.backgroundInput.value})';
 
         // TODO: Update the `innerHTML` of `this.topText`.
+        this.topText.innerHTML = this.topText.value;
 
         // TODO: Update the `innerHTML` of `this.bottomText`
-
+        this.bottomText.innerHTML = this.bottomText.value;
 
     }
     downloadImage(){
