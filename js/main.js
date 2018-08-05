@@ -53,7 +53,7 @@ class ImageMaker {
         // update `this.imagePreview`.
 
         // TODO: Update the `background-image` CSS property for `this.imagePreview`.
-        this.imagePreview.style.background-image = 'url(images/${this.backgroundInput.value})';
+        this.imagePreview.style.backgroundImage = 'url(images/${this.backgroundInput.value})';
 
         // TODO: Update the `innerHTML` of `this.topText`.
         this.topText.innerHTML = this.topText.value;
