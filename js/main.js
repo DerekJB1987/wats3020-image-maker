@@ -21,7 +21,7 @@ class ImageMaker {
         this.topText = document.createElement('p');
         
         // TODO: Add a `class` attribute to `this.topText` that contains the classname "top-text".
-        this.topText.setAttribute('class','top-text');
+        this.topText.setAttribute('class', 'top-text');
         
         // TODO: Append `this.topText` as a child element to `this.imagePreview`
         this.imagePreview.appendChild(this.topText);
@@ -33,16 +33,16 @@ class ImageMaker {
         this.bottomText.setAttribute('class','bottom-text');
         
         // TODO: Append `this.bottomText` as a child element to `this.imagePreview`
-        this.imagePreview.appendChild(this.bottomText)
+        this.imagePreview.appendChild(this.bottomText);
 
         // TODO: Select the `input` element with the `name` attribute "backgroundImage"
         this.backgroundInput = document.querySelector('select[name="backgroundImage"]');
 
         // TODO: Select the `input` element with the `name` attribute "topText"
-        this.topTextInput = document.querySelector('input[name="topText"');
+        this.topTextInput = document.querySelector('input[name="topText"]');
 
         // TODO: Select the `input` element with the `name` attribute "bottomText"
-        this.bottomTextInput = document.querySelector('input[name="bottomText"');
+        this.bottomTextInput = document.querySelector('input[name="bottomText"]');
 
     }
     drawPreview(){
@@ -56,10 +56,10 @@ class ImageMaker {
         this.imagePreview.style.backgroundImage = `url(images/${this.backgroundInput.value})`;
 
         // TODO: Update the `innerHTML` of `this.topText`.
-        this.topText.innerHTML = this.topText.value;
+        this.topText.innerHTML = this.topTextInput.value;
 
         // TODO: Update the `innerHTML` of `this.bottomText`
-        this.bottomText.innerHTML = this.bottomText.value;
+        this.bottomText.innerHTML = this.bottomTextInput.value;
 
     }
     downloadImage(){
