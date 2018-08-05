@@ -21,28 +21,28 @@ class ImageMaker {
         this.topText = document.createElement('p');
         
         // TODO: Add a `class` attribute to `this.topText` that contains the classname "top-text".
-        this.topText = setAttribute('class', 'top-text');
+        this.topText.setAttribute('class','top-text');
         
         // TODO: Append `this.topText` as a child element to `this.imagePreview`
-        this.imagePreview = appendChild('this.topText');
+        this.imagePreview.appendChild(this.topText);
 
         // TODO: create a new `<p>` element called `this.bottomText`
         this.bottomText = document.createElement('p');
         
         // TODO: Add a `class` attribute to `this.bottomText` that contains the classname "bottom-text".
-        this.bottomText = setAttribute('class', 'bottom-text');
+        this.bottomText.setAttribute('class','bottom-text');
         
         // TODO: Append `this.bottomText` as a child element to `this.imagePreview`
-        this.imagePreview = appendChild('this.bottomText')
+        this.imagePreview.appendChild(this.bottomText)
 
         // TODO: Select the `input` element with the `name` attribute "backgroundImage"
         this.backgroundInput = document.querySelector('select[name="backgroundImage"]');
 
         // TODO: Select the `input` element with the `name` attribute "topText"
-        this.topTextInput = document.querySelector('input[name="topText"]');
+        this.topTextInput = document.querySelector('input[name="topText"');
 
         // TODO: Select the `input` element with the `name` attribute "bottomText"
-        this.bottomTextInput = document.querySelector('input[name="bottomText"') ;
+        this.bottomTextInput = document.querySelector('input[name="bottomText"');
 
     }
     drawPreview(){
@@ -53,7 +53,7 @@ class ImageMaker {
         // update `this.imagePreview`.
 
         // TODO: Update the `background-image` CSS property for `this.imagePreview`.
-        this.imagePreview.style.backgroundImage = 'url(images/${this.backgroundInput.value})';
+        this.imagePreview.style.backgroundImage = `url(images/${this.backgroundInput.value})`;
 
         // TODO: Update the `innerHTML` of `this.topText`.
         this.topText.innerHTML = this.topText.value;
